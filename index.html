@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	
+  <title>Curriculum vitæ - Bilal Bechari</title>
+	
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <link rel="stylesheet" href="css/timeline.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body ng-controller="mainController">
+	<div class="loader flex-center flex-column">
+		<blockquote class="blockquote text-center">
+			<p class="mb-0">B<span class="font-sc">onjour et bienvenue sur ma page.</span></p>
+			<footer class="blockquote-footer mb-3"><cite title="Source Title">Bilal Bechari</cite></footer>
+		</blockquote>
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+	</div>
+	
+	<div class="row mx-0">
+		<nav class="col-2 col-lg-1 px-0 d-flex align-items flex-column py-3 sidebar sticky-top">
+			<div class="mb-3 accueil">
+				<a href="#/">
+					<h1 class="text-center mb-0"><i class="fal fa-home grey-color"></i></h1>
+					<p class="text-center mb-0 grey-color title-menu" ng-if="$root.currentPage == 'accueil'">Accueil</p>
+				</a>
+			</div>
+			<div class="mb-3 formation">
+				<a href="#/formation">
+					<h1 class="text-center mb-0"><i class="fal fa-graduation-cap grey-color"></i></h1>
+					<p class="text-center mb-0 grey-color title-menu" ng-if="$root.currentPage == 'formation'">Formation</p>
+				</a>
+			</div>
+			<div class="mb-3 experiences">
+				<a href="#/experiences">
+					<h1 class="text-center mb-0"><i class="fal fa-briefcase grey-color"></i></h1>
+					<p class="text-center mb-0 grey-color title-menu" ng-if="$root.currentPage == 'experiences'">Expériences</p>
+				</a>
+			</div>
+			<div class="mb-3 competences">
+				<a href="#/competences">
+					<h1 class="text-center mb-0"><i class="fal fa-phone-laptop grey-color"></i></h1>
+					<p class="text-center mb-0 grey-color title-menu" ng-if="$root.currentPage == 'competences'">Compétences</p>
+				</a>
+			</div>
+			<div class="hobbies">
+				<a href="#/hobbies">
+					<h1 class="text-center mb-0"><i class="fal fa-thumbs-up grey-color"></i></h1>
+					<p class="text-center mb-0 grey-color title-menu" ng-if="$root.currentPage == 'hobbies'">Hobbies</p>
+				</a>
+			</div>
+			<div class="mt-auto">
+				<a href="https://www.linkedin.com/in/bilalbechari/" target="_blank">
+					<h5 class="text-center mb-0 text-linkedin"><i class="fab fa-linkedin"></i></h5>
+				</a>
+			</div>
+		</nav>
+		<div class="col-10 col-lg-11" ng-class="{'px-0': $root.currentPage == 'accueil'}">
+			<div ng-view></div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.js"></script>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="app/app.js"></script>
+	<script type="text/javascript" src="app/mainController.js"></script>
+	<script type="text/javascript" src="app/accueil/accueilController.js"></script>
+	<script type="text/javascript" src="app/formation/formationController.js"></script>
+	<script type="text/javascript" src="app/experiences/experiencesController.js"></script>
+	<script type="text/javascript" src="app/competences/competencesController.js"></script>
+	<script type="text/javascript" src="app/hobbies/hobbiesController.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109050041-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-109050041-3');
+	</script>
+</body>
+</html>
